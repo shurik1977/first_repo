@@ -78,7 +78,8 @@ describe('Automated Test for Customer Feedback', () => {
           expect(interception.response.statusCode).to.equal(201);
 
           // Checked assertion that a success message is displayed after submitting the form
-          cy.get('.mat-simple-snack-bar-content').should('be.visible');
+          //cy.get('.mat-simple-snack-bar-content').should('be.visible');
+          cy.contains('Thank you for your feedback.').should('be.visible');
         });
       });
     });
